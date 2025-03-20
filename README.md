@@ -35,4 +35,17 @@ python3 -m pip install -r requirements.txt
    - sales_data.csv
 3. Add raw data to newly created files (see examples to gather data)
 
-To Be Continued...
+## Add basic scripts and log
+1. Create utils/logger.py
+- Create file named logger.py in utils folder
+- Copy code from repo into new logger.py file
+2. Create scripts/data_prep.py
+- Create folder named scripts
+- Create new file in scripts folder named data_prep.py
+- Copy code from repo into new data_prep.py
+3. Execute python script
+```
+python3 scripts/data_prep.py
+```
+
+To be continued......
