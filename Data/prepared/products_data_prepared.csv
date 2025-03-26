@@ -1,0 +1,9 @@
+productid,productname,category,unitprice,daystoreceive,customizable
+101,laptop,Electronics,793.12,5,Customizable
+102,hoodie,Clothing,39.1,4,Limited
+103,cable,Electronics,22.76,1,
+104,hat,Clothing,43.1,4,Limited
+105,football,Sports,19.78,1,Limited
+106,controller,Electronics,88.98,2,Limited
+107,jacket,Clothing,67.02,4,
+108,protector,Electronics,12.56,3,Nont
