@@ -48,4 +48,34 @@ python3 -m pip install -r requirements.txt
 python3 scripts/data_prep.py
 ```
 
-To be continued......
+## Add Additional Data
+- Added unique data to dataset 
+1. Download raw data to excel to add columns
+2. If following project on own can use any columns headings or data you would like I used the data below
+   - Customers - TotalTransactions and LoyaltyStatus
+   - Product - Daystoreceive and Customizable
+   - Sales - LoyaltyPercentage and BillType
+3. Load data back to corresponding raw files
+
+## Clean and prepare data
+1. Create prep scripts
+   - In scripts folder create data_preperation subfolder
+   - Create 3 separate "prepare" files 
+2. Run scripts
+```
+python3 scripts/data_preparation/prepare_customers_data.py
+python3 scripts/data_preparation/prepare_products_data.py
+python3 scripts/data_preparation/prepare_sales_data.py
+```
+3. After scripts have run new prepared data should appear as new files named customers_prepared_data.csv
+
+## Generic data scrub and test
+- Though not needed as data is clean added generic data scubber as this is a learning module
+1. Create data_scrubber.py file in scripts and copy code
+2. Create tests folder and the test_data_scrubber.py 
+3. Run test to ensure code works properly
+```
+python3 tests/test_data_scrubber.py
+```
+
+To be continued.......
