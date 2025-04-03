@@ -67,8 +67,8 @@ def create_product_table(cursor: sqlite3.Cursor) -> None:
                 productid INTEGER PRIMARY KEY,
                 productname TEXT NOT NULL,
                 category TEXT,
-                unitprice_usd REAL NOT NULL,
-                daytoreceive INTEGER,
+                unitprice REAL NOT NULL,
+                daystoreceive INTEGER,
                 customizable TEXT
             )
         """)
@@ -100,7 +100,7 @@ def create_sale_table(cursor: sqlite3.Cursor) -> None:
         if 'customerid' not in columns:
             cursor.execute("ALTER TABLE sale ADD COLUMN customerid INTEGER;")
             logger.info("Added 'customerid' column to sale table.")
-            
+
     except sqlite3.Error as e:
         logger.error(f"Error creating sale table: {e}")
 

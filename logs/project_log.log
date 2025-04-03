@@ -217,3 +217,21 @@ dtype: int64
 2025-04-03 16:55:25.970 | INFO     | __main__:create_sale_table:102 - Added 'customerid' column to sale table.
 2025-04-03 16:55:25.970 | INFO     | __main__:create_dw:122 - Data warehouse created successfully.
 2025-04-03 16:55:25.970 | INFO     | __main__:main:136 - Data warehouse creation complete.
+2025-04-03 16:57:36.927 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 16:57:36.927 | INFO     | __main__:main:134 - Starting data warehouse creation...
+2025-04-03 16:57:36.929 | INFO     | __main__:create_customer_table:50 - customer table created.
+2025-04-03 16:57:36.930 | INFO     | __main__:create_customer_table:57 - Added 'totaltransactions' column to customer table.
+2025-04-03 16:57:36.932 | INFO     | __main__:create_product_table:75 - product table created.
+2025-04-03 16:57:36.933 | INFO     | __main__:create_sale_table:95 - sale table created.
+2025-04-03 16:57:36.934 | INFO     | __main__:create_sale_table:102 - Added 'customerid' column to sale table.
+2025-04-03 16:57:36.934 | INFO     | __main__:create_dw:122 - Data warehouse created successfully.
+2025-04-03 16:57:36.934 | INFO     | __main__:main:136 - Data warehouse creation complete.
+2025-04-03 17:00:15.590 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 17:00:15.590 | INFO     | __main__:main:134 - Starting data warehouse creation...
+2025-04-03 17:00:15.592 | INFO     | __main__:create_customer_table:50 - customer table created.
+2025-04-03 17:00:15.594 | INFO     | __main__:create_customer_table:57 - Added 'totaltransactions' column to customer table.
+2025-04-03 17:00:15.595 | INFO     | __main__:create_product_table:75 - product table created.
+2025-04-03 17:00:15.596 | INFO     | __main__:create_sale_table:95 - sale table created.
+2025-04-03 17:00:15.598 | INFO     | __main__:create_sale_table:102 - Added 'customerid' column to sale table.
+2025-04-03 17:00:15.598 | INFO     | __main__:create_dw:122 - Data warehouse created successfully.
+2025-04-03 17:00:15.598 | INFO     | __main__:main:136 - Data warehouse creation complete.
