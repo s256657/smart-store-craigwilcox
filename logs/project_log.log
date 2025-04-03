@@ -149,3 +149,34 @@ dtype: int64
 2025-03-26 13:57:47.723 | INFO     | __main__:main:264 - ==================================
 2025-03-26 13:57:47.723 | INFO     | __main__:main:265 - FINISHED prepare_products_data.py
 2025-03-26 13:57:47.723 | INFO     | __main__:main:266 - ==================================
+2025-04-03 14:34:51.933 | INFO     | __main__:main:43 - Starting data warehouse creation...
+2025-04-03 14:34:51.935 | INFO     | __main__:create_dw:31 - Data warehouse created successfully.
+2025-04-03 14:34:51.935 | INFO     | __main__:main:45 - Data warehouse creation complete.
+2025-04-03 14:37:50.372 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 14:37:50.372 | INFO     | __main__:main:115 - Starting data warehouse creation...
+2025-04-03 14:37:50.375 | INFO     | __main__:create_customer_table:48 - customer table created.
+2025-04-03 14:37:50.377 | INFO     | __main__:create_product_table:63 - product table created.
+2025-04-03 14:37:50.378 | INFO     | __main__:create_sale_table:84 - sale table created.
+2025-04-03 14:37:50.378 | INFO     | __main__:create_dw:103 - Data warehouse created successfully.
+2025-04-03 14:37:50.378 | INFO     | __main__:main:117 - Data warehouse creation complete.
+2025-04-03 15:29:28.068 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 15:29:28.069 | INFO     | __main__:main:120 - Starting data warehouse creation...
+2025-04-03 15:29:28.072 | INFO     | __main__:create_customer_table:50 - customer table created.
+2025-04-03 15:29:28.074 | INFO     | __main__:create_product_table:67 - product table created.
+2025-04-03 15:29:28.074 | ERROR    | __main__:create_sale_table:91 - Error creating sale table: unknown column "customer_id" in foreign key definition
+2025-04-03 15:29:28.074 | INFO     | __main__:create_dw:108 - Data warehouse created successfully.
+2025-04-03 15:29:28.074 | INFO     | __main__:main:122 - Data warehouse creation complete.
+2025-04-03 15:31:13.817 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 15:31:13.817 | INFO     | __main__:main:118 - Starting data warehouse creation...
+2025-04-03 15:31:13.820 | INFO     | __main__:create_customer_table:50 - customer table created.
+2025-04-03 15:31:13.821 | INFO     | __main__:create_product_table:67 - product table created.
+2025-04-03 15:31:13.821 | ERROR    | __main__:create_sale_table:89 - Error creating sale table: near ")": syntax error
+2025-04-03 15:31:13.822 | INFO     | __main__:create_dw:106 - Data warehouse created successfully.
+2025-04-03 15:31:13.822 | INFO     | __main__:main:120 - Data warehouse creation complete.
+2025-04-03 15:33:44.884 | INFO     | __main__:<module>:33 - Existing database data/dw/smart_sales.db deleted.
+2025-04-03 15:33:44.884 | INFO     | __main__:main:118 - Starting data warehouse creation...
+2025-04-03 15:33:44.886 | INFO     | __main__:create_customer_table:50 - customer table created.
+2025-04-03 15:33:44.888 | INFO     | __main__:create_product_table:67 - product table created.
+2025-04-03 15:33:44.889 | INFO     | __main__:create_sale_table:87 - sale table created.
+2025-04-03 15:33:44.889 | INFO     | __main__:create_dw:106 - Data warehouse created successfully.
+2025-04-03 15:33:44.889 | INFO     | __main__:main:120 - Data warehouse creation complete.
