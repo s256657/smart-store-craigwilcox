@@ -39,15 +39,23 @@ def create_customer_table(cursor: sqlite3.Cursor) -> None:
     try:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS customer (
-                customer_id INTEGER PRIMARY KEY,
+                customerid INTEGER PRIMARY KEY,
                 name TEXT NOT NULL,
                 region TEXT,
-                join_date TEXT  -- ISO 8601 format recommended for SQLite,
-                total_transactions INTEGER,
-                loyalty_status TEXT
+                joindate TEXT  -- ISO 8601 format recommended for SQLite,
+                totaltransactions INTEGER,
+                loyaltystatus TEXT
             )
         """)
         logger.info("customer table created.")
+
+        # Ensure 'totaltransactions' column exists as it is not being added
+        cursor.execute("PRAGMA table_info(customer);")
+        columns = [column[1] for column in cursor.fetchall()]
+        if 'totaltransactions' not in columns:
+            cursor.execute("ALTER TABLE customer ADD COLUMN totaltransactions INTEGER;")
+            logger.info("Added 'totaltransactions' column to customer table.")
+
     except sqlite3.Error as e:
         logger.error(f"Error creating customer table: {e}")
 
@@ -56,11 +64,11 @@ def create_product_table(cursor: sqlite3.Cursor) -> None:
     try:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS product (
-                product_id INTEGER PRIMARY KEY,
-                name TEXT NOT NULL,
+                productid INTEGER PRIMARY KEY,
+                productname TEXT NOT NULL,
                 category TEXT,
-                unit_price_usd REAL NOT NULL,
-                day_to_receive INTEGER,
+                unitprice_usd REAL NOT NULL,
+                daytoreceive INTEGER,
                 customizable TEXT
             )
         """)
@@ -73,18 +81,26 @@ def create_sale_table(cursor: sqlite3.Cursor) -> None:
     try:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS sale (
-                transaction_id INTEGER PRIMARY KEY,
-                sale_date TEXT -- ISO 8601 format recommended for SQLite,
-                customer_id INTEGER,
-                product_id INTEGER,
-                store_id INTEGER,
-                campaign_id INTEGER,
-                sale_amount REAL NOT NULL,
-                loyalty_percentage INTEGER,
-                bill_type TEXT
+                transactionid INTEGER PRIMARY KEY,
+                saledate TEXT -- ISO 8601 format recommended for SQLite,
+                customerid INTEGER,
+                productid INTEGER,
+                storeid INTEGER,
+                campaignid INTEGER,
+                saleamount REAL NOT NULL,
+                loyaltypercentage INTEGER,
+                billtype TEXT
             )
         """)
         logger.info("sale table created.")
+
+         # Ensure 'customerid' column exists as it is not being added
+        cursor.execute("PRAGMA table_info(sale);")
+        columns = [column[1] for column in cursor.fetchall()]
+        if 'customerid' not in columns:
+            cursor.execute("ALTER TABLE sale ADD COLUMN customerid INTEGER;")
+            logger.info("Added 'customerid' column to sale table.")
+            
     except sqlite3.Error as e:
         logger.error(f"Error creating sale table: {e}")
 
