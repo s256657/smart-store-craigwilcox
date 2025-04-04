@@ -78,4 +78,17 @@ python3 scripts/data_preparation/prepare_sales_data.py
 python3 tests/test_data_scrubber.py
 ```
 
-To be continued.......
+## Create and load data warehouse
+1. Create two files in scripts folder create_dw.py and etl_to_dw.py
+   - I created two files for organization purposes create_dw.py to make sure the data warehouse is formatted properly and etl_to_dw.py it to load data
+   - See specific files for code
+2. Create data warehouse
+'''
+python3 scripts/create_dw.py
+'''
+3. Load data to data warehouse
+'''
+python3 scripts/etl_to_dw.py
+'''
+
+To be continues....
